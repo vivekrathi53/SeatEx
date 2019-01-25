@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/S1"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="S1" />
+    <item
+        android:id="@+id/S2"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="S2" />
+    <item
+        android:id="@+id/S3"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="S3" />
+    <item
+        android:id="@+id/S4"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="S4" />
+    <item
+        android:id="@+id/S5"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="S5" />
+    <item
+        android:id="@+id/S6"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="S6" />
+    <item
+        android:id="@+id/S7"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="S7" />
+    <item
+        android:id="@+id/S8"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="S8" />
+    <item
+        android:id="@+id/S9"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="S9" />
+    <item
+        android:id="@+id/S10"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="S10" />
+    <item
+        android:id="@+id/S11"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="S11" />
+    <item
+        android:id="@+id/S12"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="S12" />
+
+</menu>

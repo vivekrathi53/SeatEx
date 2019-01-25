@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "657609103832",
+    "firebase_url": "https://myreader-2924a.firebaseio.com",
+    "project_id": "myreader-2924a",
+    "storage_bucket": "myreader-2924a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657609103832:android:241b0b0d13d7ab48",
+        "android_client_info": {
+          "package_name": "com.example.android.myreader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "657609103832-s1v34p2sf2sc6bkp6ripsgoq6m21j8u6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.myreader",
+            "certificate_hash": "e8b09b4eca7f45db72d745909fe2d38370729783"
+          }
+        },
+        {
+          "client_id": "657609103832-ur9sq58c00ksuo43sc1255td9b277pld.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn8bR8O9U51zzrZlyLasMVclpNnLtaCws"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "657609103832-ur9sq58c00ksuo43sc1255td9b277pld.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
