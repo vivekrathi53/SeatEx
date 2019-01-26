@@ -58,15 +58,15 @@ public class Begin extends AppCompatActivity {
                 return false;
             }
         });
-      for(int i=1;i<=12;i++)
+      /*for(int i=1;i<=12;i++)
         {
             for(int j=1;j<=72;j++)
             {
                 Toast.makeText(Begin.this,"Hello",Toast.LENGTH_LONG).show();
-                seat s = new seat(j%8,i,j,0,"Indore","Khandwa",generateRandom((int)((Math.random())*10)+1),(int)(Math.random()*70),(int)(Math.random()*2),"vivekrathi53@gmail.com");
+                seat s = new seat(j%8,i+0,j+0,0,"Indore","Khandwa",generateRandom((int)((Math.random())*10)+1),(int)(Math.random()*70),(int)(Math.random()*2),"vivekrathi53@gmail.com");
                 databaseExpenses.child("Node1").child(String.valueOf("3933")).child("S"+Integer.toString(i)).child(Integer.toString(j)).setValue(s);
             }
-        }
+        }   */
         editText2=findViewById(R.id.email);
         editText3=findViewById(R.id.seatNumber);
         editText4=findViewById(R.id.coachNumber);
@@ -104,7 +104,7 @@ public class Begin extends AppCompatActivity {
                 coachNumber=editText4.getText().toString();
                 if(trainName!=null && emaill!=null && seatNumber!=null && coachNumber!=null)
                 {
-                    databaseExpenses.child("Node1").child(trainName).child(coachNumber).child(seatNumber).addValueEventListener(new ValueEventListener() {
+                    databaseExpenses.child("Node1").child(trainName).child(coachNumber).child(seatNumber).addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             seat s = dataSnapshot.getValue(seat.class);
@@ -116,7 +116,7 @@ public class Begin extends AppCompatActivity {
                                     Toast.makeText(Begin.this,"Verified",Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(Begin.this,Seats.class);
                                     intent.putExtra("seatNumber",seatNumber);
-                                    intent.putExtra("coachNumber",coachNumber);
+                                    intent.putExtra("coachNumber",""+coachNumber.charAt(1));
                       //              intent.putExtra("TrainDetails",st);
                                     intent.putExtra("TrainNumber",trainName);
                                     startActivity(intent);

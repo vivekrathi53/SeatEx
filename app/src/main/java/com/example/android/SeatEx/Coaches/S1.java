@@ -201,6 +201,8 @@ public class S1 extends Fragment {
 
                             }
                         }
+                        thisSeat.setBackgroundColor(Color.parseColor("#FBE9E7"));
+
                         // make their color grey here or above :P
                     }
                     else if(visited[seatNumber]==2)// blue
@@ -245,7 +247,7 @@ public class S1 extends Fragment {
 
                             }
                         });
-                        thisSeat.setBackgroundColor(Color.parseColor("#2196f3"));
+                        thisSeat.setBackgroundColor(Color.parseColor("#0091EA"));
                     }
                     else if(seatDetails[seatNumber].getInterested()==0)// grey color
                     {
