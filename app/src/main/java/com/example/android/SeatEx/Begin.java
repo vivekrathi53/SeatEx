@@ -27,7 +27,7 @@ import java.util.Random;
 public class Begin extends AppCompatActivity {
     MaterialSearchView materialSearchView;
     final String TAG = "check";
-    seat[][] s=new seat[13][73];
+  //  seat[][] st=new seat[13][73];
     String[] list;
     String trainName;
     Button button,button1,buttonSubmit;
@@ -115,6 +115,8 @@ public class Begin extends AppCompatActivity {
                                 {
                                     Toast.makeText(Begin.this,"Verified",Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(Begin.this,Seats.class);
+                      //              intent.putExtra("TrainDetails",st);
+                                    intent.putExtra("TrainNumber",trainName);
                                     startActivity(intent);
                                 }
                                 else

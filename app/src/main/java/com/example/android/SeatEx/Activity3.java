@@ -8,6 +8,8 @@ import android.widget.Button;
 
 public class Activity3 extends AppCompatActivity {
     Button button,button1;
+    Button[][] seats = new Button[13][73];
+    seat[][] s = new seat[13][72];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,14 @@ public class Activity3 extends AppCompatActivity {
                 button1.setBackgroundColor(Color.parseColor("#ff00ff"));
             }
         });
+        /*for(int i=1;i<=12;i++)
+        {
+            for(int j=1;j<=72;j++)
+            {
+                seats[i][j]=findViewById(R.id.)
+            }
+        }*/
+        s=(seat[][]) getIntent().getSerializableExtra("SeatDetails");
     }
 
     private void openDialog() {

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ScrollView
         android:layout_width="match_parent"
@@ -24,21 +26,25 @@
                         android:orientation="horizontal">
                         <Button
                             android:id="@+id/seat8"
+                            android:text="8"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
                             android:id="@+id/seat1"
                             android:layout_marginLeft="40dp"
+                            android:text="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="2"
                             android:id="@+id/seat2"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="3"
                             android:id="@+id/seat3"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -50,22 +56,26 @@
                         android:weightSum="17"
                         android:orientation="horizontal">
                         <Button
+                            android:text="7"
                             android:id="@+id/seat7"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="4"
                             android:id="@+id/seat4"
                             android:layout_marginLeft="40dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="5"
                             android:id="@+id/seat5"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="6"
                             android:id="@+id/seat6"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -87,19 +97,27 @@
                         android:weightSum="17"
                         android:orientation="horizontal">
                         <Button
+                            android:text="16"
+                            android:id="@+id/seat16"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="9"
+                            android:id="@+id/seat9"
                             android:layout_marginLeft="40dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="10"
+                            android:id="@+id/seat10"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="11"
+                            android:id="@+id/seat11"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
@@ -110,75 +128,27 @@
                         android:weightSum="17"
                         android:orientation="horizontal">
                         <Button
+                            android:text="15"
+                            android:id="@+id/seat15"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="12"
+                            android:id="@+id/seat12"
                             android:layout_marginLeft="40dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="13"
+                            android:id="@+id/seat13"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_marginBottom="10dp"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:weightSum="17"
-                        android:orientation="horizontal">
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_marginLeft="40dp"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:weightSum="17"
-                        android:orientation="horizontal">
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_marginLeft="40dp"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
+                            android:text="14"
+                            android:id="@+id/seat14"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
@@ -199,19 +169,27 @@
                         android:weightSum="17"
                         android:orientation="horizontal">
                         <Button
+                            android:text="24"
+                            android:id="@+id/seat24"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="17"
+                            android:id="@+id/seat17"
                             android:layout_marginLeft="40dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="18"
+                            android:id="@+id/seat18"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="19"
+                            android:id="@+id/seat19"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
@@ -222,75 +200,27 @@
                         android:weightSum="17"
                         android:orientation="horizontal">
                         <Button
+                            android:text="23"
+                            android:id="@+id/seat23"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="20"
+                            android:id="@+id/seat20"
                             android:layout_marginLeft="40dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="21"
+                            android:id="@+id/seat21"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_marginBottom="10dp"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:weightSum="17"
-                        android:orientation="horizontal">
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_marginLeft="40dp"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:weightSum="17"
-                        android:orientation="horizontal">
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_marginLeft="40dp"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
+                            android:text="22"
+                            android:id="@+id/seat22"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
@@ -311,19 +241,27 @@
                         android:weightSum="17"
                         android:orientation="horizontal">
                         <Button
+                            android:text="32"
+                            android:id="@+id/seat32"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="25"
+                            android:id="@+id/seat25"
                             android:layout_marginLeft="40dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="26"
+                            android:id="@+id/seat26"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="27"
+                            android:id="@+id/seat27"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
@@ -334,75 +272,27 @@
                         android:weightSum="17"
                         android:orientation="horizontal">
                         <Button
+                            android:text="31"
+                            android:id="@+id/seat31"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="28"
+                            android:id="@+id/seat28"
                             android:layout_marginLeft="40dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="29"
+                            android:id="@+id/seat29"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_marginBottom="10dp"
-                android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:weightSum="17"
-                        android:orientation="horizontal">
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_marginLeft="40dp"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:weightSum="17"
-                        android:orientation="horizontal">
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_marginLeft="40dp"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
-                        <Button
+                            android:text="30"
+                            android:id="@+id/seat30"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
@@ -423,19 +313,28 @@
                         android:weightSum="17"
                         android:orientation="horizontal">
                         <Button
+                            android:text="40"
+                            android:id="@+id/seat40"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="4"/>
+                            android:layout_weight="4"
+                            tools:ignore="DuplicateIds" />
                         <Button
+                            android:text="33"
+                            android:id="@+id/seat33"
                             android:layout_marginLeft="40dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="34"
+                            android:id="@+id/seat34"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:text="35"
+                            android:id="@+id/seat35"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
@@ -446,19 +345,318 @@
                         android:weightSum="17"
                         android:orientation="horizontal">
                         <Button
+                            android:id="@+id/seat39"
+                            android:text="39"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:id="@+id/seat36"
+                            android:text="36"
                             android:layout_marginLeft="40dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:id="@+id/seat37"
+                            android:text="37"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:id="@+id/seat38"
+                            android:text="38"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="17"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/seat48"
+                            android:text="48"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat41"
+                            android:text="41"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat42"
+                            android:text="42"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat43"
+                            android:text="43"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="17"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/seat47"
+                            android:text="47"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat44"
+                            android:text="44"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat45"
+                            android:text="45"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat46"
+                            android:text="46"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            tools:ignore="DuplicateIds" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="17"
+                        android:orientation="horizontal">
+                        <Button
+                            android:text="56"
+                            android:id="@+id/seat56"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat49"
+                            android:text="49"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            tools:ignore="DuplicateIds" />
+                        <Button
+                            android:id="@+id/seat50"
+                            android:text="50"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat51"
+                            android:text="51"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="17"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/seat55"
+                            android:text="55"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat52"
+                            android:text="52"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            tools:ignore="DuplicateIds" />
+                        <Button
+                            android:id="@+id/seat53"
+                            android:text="53"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat54"
+                            android:text="54"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="17"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/seat64"
+                            android:text="64"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat57"
+                            android:text="57"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat58"
+                            android:text="58"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat59"
+                            android:text="59"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="17"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/seat63"
+                            android:text="63"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat60"
+                            android:text="60"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat61"
+                            android:text="61"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat62"
+                            android:text="62"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="17"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/seat72"
+                            android:text="72"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat65"
+                            android:text="65"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat66"
+                            android:text="66"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat67"
+                            android:text="67"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="17"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/seat71"
+                            android:text="71"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat68"
+                            android:text="68"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat69"
+                            android:text="69"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"/>
+                        <Button
+                            android:id="@+id/seat70"
+                            android:text="70"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>

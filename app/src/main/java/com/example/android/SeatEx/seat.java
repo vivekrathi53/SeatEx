@@ -2,6 +2,7 @@ package com.example.android.SeatEx;
 
 import android.util.Pair;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import static com.google.android.gms.common.internal.safeparcel.SafeParcelable.NULL;
@@ -10,7 +11,7 @@ import static com.google.android.gms.common.internal.safeparcel.SafeParcelable.N
  * Created by raj garg on 26-01-2019.
  */
 
-public class seat {
+public class seat implements Serializable{
     private int type;
     /*store category of seat
     1,4 for Lower;
