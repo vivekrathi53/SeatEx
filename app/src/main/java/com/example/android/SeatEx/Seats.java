@@ -90,7 +90,9 @@ public class Seats extends AppCompatActivity
                 databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child("S"+Integer.toString(i)).child(Integer.toString(j)).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                         seat temp = dataSnapshot.getValue(seat.class);
+                        //System.out.println("???????--"+temp.getCoach()+" "+temp.getSeat_number());
                         s[temp.getCoach()][temp.getSeat_number()]=temp;
                         updateDisplay(temp);
                     }
@@ -108,6 +110,7 @@ public class Seats extends AppCompatActivity
     {
         if(curCoach.equals("S"+Integer.toString(temp.getCoach())))
         {
+            System.out.println("--!--!-!-"+temp.getCoach()+" "+temp.getSeat_number());
             int in = temp.getInterested();
             Button b = buttons[temp.getSeat_number()];
             if(in==-1)// grey or unreserved
@@ -128,6 +131,10 @@ public class Seats extends AppCompatActivity
                 //visited[temp.getCoach()][temp.getSeat_number()]=0;
                 b.setBackgroundColor(Color.parseColor("#00C853"));
             }
+            else if(visited[temp.getCoach()][temp.getSeat_number()]==2)
+            {
+                buttons[temp.getSeat_number()].setBackgroundColor(Color.parseColor("#3949AB"));
+            }
            if(temp.getCoach()==MyCoach&&temp.getSeat_number()==MySeat)
            {
                ArrayList<Pair<Integer,Integer> > InterestedInYou = temp.getInterstedInYou();// pink
@@ -145,10 +152,14 @@ public class Seats extends AppCompatActivity
                    if(("S"+InterestedIn.get(i).first).equals(curCoach))
                    {
                        visited[InterestedIn.get(i).first][InterestedIn.get(i).second]=3;
-                       buttons[InterestedIn.get(i).second].setBackgroundColor(Color.parseColor("#3949AB"));// blue
+                       buttons[InterestedIn.get(i).second].setBackgroundColor(Color.parseColor("#3949AB"));// blue color
                    }
                }
            }
+        }
+        else
+        {
+            System.out.println("------"+temp.getCoach()+" "+temp.getSeat_number());
         }
     }
 
@@ -334,11 +345,15 @@ public class Seats extends AppCompatActivity
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
                             {
                                 seat temp = dataSnapshot.getValue(seat.class);//user seat
-                                ArrayList<Pair<Integer,Integer>> temp2 = temp.getInterstedInYou();
+                                ArrayList<Pair<Integer,Integer> > temp2 = temp.getInterstedInYou();
                                 temp2.add(new Pair(MyCoach,MySeat));
                                 temp.setInterstedInYou(temp2);
-                                databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child(curCoach).child(Integer.toString(temp.getSeat_number())).setValue(temp);
+                                Toast.makeText(Seats.this,curCoach,Toast.LENGTH_LONG).show();
                                 final int changingSeat = temp.getSeat_number();
+                                visited[(Integer.parseInt(""+curCoach.charAt(1)))][changingSeat]=2;
+                                databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child(curCoach).child(Integer.toString(temp.getSeat_number())).setValue(temp);
+                                updateDisplay(temp);
+
                                 databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child("S"+Integer.toString(MyCoach)).child(Integer.toString(MySeat)).addListenerForSingleValueEvent(new ValueEventListener()
                                 {
                                     @Override
@@ -346,10 +361,12 @@ public class Seats extends AppCompatActivity
                                     {
                                         seat temp = dataSnapshot.getValue(seat.class);//user seat
                                         ArrayList<Pair<Integer,Integer> > temp2 = temp.getInterstedIn();
+                                        Toast.makeText(Seats.this,curCoach,Toast.LENGTH_LONG).show();
                                         temp2.add(new Pair(Integer.parseInt(""+curCoach.charAt(1)),changingSeat));
                                         temp.setInterstedIn(temp2);
-                                        visited[(Integer.parseInt(""+curCoach.charAt(1)))][changingSeat]=2;
+                                        s[Integer.parseInt(""+curCoach.charAt(1))][changingSeat]=temp;
                                         databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child("S"+Integer.toString(MyCoach)).child(Integer.toString(MySeat)).setValue(temp);
+
                                     }
 
                                     @Override
@@ -424,7 +441,8 @@ public class Seats extends AppCompatActivity
             curCoachDisplay.setText("S1");
             for(int i=1;i<=72;i++)
             {
-                updateDisplay(s[1][i]);
+                if(s[1][i]!=null)updateDisplay(s[1][i]);
+                else Toast.makeText(Seats.this,"Wait A minute",Toast.LENGTH_LONG).show();
             }
            // refresh();
         } else if (id == R.id.S2) {
@@ -432,7 +450,8 @@ public class Seats extends AppCompatActivity
             curCoachDisplay.setText("S2");
             for(int i=1;i<=72;i++)
             {
-                updateDisplay(s[2][i]);
+                if(s[2][i]!=null)updateDisplay(s[2][i]);
+                else Toast.makeText(Seats.this,"Wait A minute",Toast.LENGTH_LONG).show();
             }
            // refresh();
         } else if (id == R.id.S3) {
@@ -440,7 +459,8 @@ public class Seats extends AppCompatActivity
             curCoachDisplay.setText("S3");
             for(int i=1;i<=72;i++)
             {
-                updateDisplay(s[3][i]);
+                if(s[3][i]!=null)updateDisplay(s[3][i]);
+                else Toast.makeText(Seats.this,"Wait A minute",Toast.LENGTH_LONG).show();
             }
            // refresh();
         } else if (id == R.id.S4) {
