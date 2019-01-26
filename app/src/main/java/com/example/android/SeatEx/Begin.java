@@ -2,6 +2,7 @@ package com.example.android.SeatEx;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,28 +12,35 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
 import java.util.Calendar;
+import java.util.Random;
 
 public class Begin extends AppCompatActivity {
     MaterialSearchView materialSearchView;
     final String TAG = "check";
+    seat[][] s=new seat[13][73];
     String[] list;
     String trainName;
-    Button button,button1;
+    Button button,button1,buttonSubmit;
     int year,month,day;
-    TextView textView1,textView2,textView3,textView4;
+    final DatabaseReference databaseExpenses = FirebaseDatabase.getInstance().getReference();
+  //  TextView textView1,textView2,textView3,textView4;
+    String seatNumber,coachNumber,Date,emaill;
     EditText editText1;
+    EditText editText2,editText3,editText4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_begin);
-        String seatNumber;
-        String coachNumber;
-        String email;
-        EditText editText2,editText3,editText4;
         editText1=findViewById(R.id.date);
         list= new String[]{"raj","gaurav"};
         materialSearchView=findViewById(R.id.mySearch);
@@ -50,11 +58,83 @@ public class Begin extends AppCompatActivity {
                 return false;
             }
         });
+     /**   for(int i=1;i<=12;i++)
+        {
+            for(int j=1;j<=72;j++)
+            {
+                Toast.makeText(Begin.this,"Hello",Toast.LENGTH_LONG).show();
+                seat s = new seat(j%8,i,j,0,"Indore","Khandwa",generateRandom(),(int)(Math.random()*70),(int)(Math.random()*2),"vivekrathi53@gmail.com");
+                databaseExpenses.child("Node1").child(String.valueOf("3933")).child("S"+Integer.toString(i)).child(Integer.toString(j)).setValue(s);
+            }
+        } **/
+        editText2=findViewById(R.id.email);
+        editText3=findViewById(R.id.seatNumber);
+        editText4=findViewById(R.id.coachNumber);
         button1=findViewById(R.id.dates);
+        buttonSubmit = findViewById(R.id.submit);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 func();
+            }
+        });
+
+
+    }
+    public static String generateRandom()
+    {
+        String aToZ="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234";
+        Random rand=new Random();
+        StringBuilder res=new StringBuilder();
+        for (int i = 0; i < 7; i++) {
+            int randIndex=rand.nextInt(aToZ.length());
+            res.append(aToZ.charAt(randIndex));
+        }
+        return res.toString();
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        buttonSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                emaill=editText2.getText().toString();
+                seatNumber=editText3.getText().toString();
+                coachNumber=editText4.getText().toString();
+                if(trainName!=null && emaill!=null && seatNumber!=null && coachNumber!=null)
+                {
+                    databaseExpenses.child("Node1").child(trainName).child(coachNumber).addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            seat s = dataSnapshot.child(seatNumber).getValue(seat.class);
+                            if(s!=null)
+                            {
+                                Toast.makeText(Begin.this,emaill,Toast.LENGTH_LONG).show();
+                                if(emaill.equals(s.getEmail()))
+                                {
+                                    Toast.makeText(Begin.this,"Verified",Toast.LENGTH_LONG).show();
+                                    Intent intent = new Intent(Begin.this,Seats.class);
+                                    startActivity(intent);
+                                }
+                                else
+                                {
+                                    Toast.makeText(Begin.this,"Invalid Details",Toast.LENGTH_LONG).show();
+                                }
+                            }
+                            else Toast.makeText(Begin.this,"NULL",Toast.LENGTH_LONG).show();
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
+                }
+                else
+                {
+                    Toast.makeText(Begin.this,"Some field is left vacant",Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
@@ -86,7 +166,7 @@ public class Begin extends AppCompatActivity {
                 Intent intent = new Intent(Begin.this,Activity3.class);
             //    intent.putExtra("tab_1",book);
             //    intent.putExtra("tab_2","nothing");
-            //    intent.putExtra("tab_3","nothing");
+            //    intent.putExtra("tab_3","nothing");`
                 startActivity(intent);
                 return true;
             }

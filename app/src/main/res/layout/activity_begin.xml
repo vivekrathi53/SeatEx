@@ -36,20 +36,24 @@
                 android:layout_weight="1"/>
         </LinearLayout>
         <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter email through which ticket is reserved"/>
         <EditText
+            android:id="@+id/seatNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter seat number"/>
         <EditText
+            android:id="@+id/coachNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter coach number"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/submit"
             android:text="submit"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

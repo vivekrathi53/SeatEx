@@ -23,19 +23,23 @@
                         android:weightSum="17"
                         android:orientation="horizontal">
                         <Button
+                            android:id="@+id/seat8"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:id="@+id/seat1"
                             android:layout_marginLeft="40dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:id="@+id/seat2"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:id="@+id/seat3"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
@@ -46,19 +50,23 @@
                         android:weightSum="17"
                         android:orientation="horizontal">
                         <Button
+                            android:id="@+id/seat7"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:id="@+id/seat4"
                             android:layout_marginLeft="40dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:id="@+id/seat5"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
                         <Button
+                            android:id="@+id/seat6"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="4"/>
