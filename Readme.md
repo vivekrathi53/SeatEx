@@ -7,5 +7,5 @@
 4. Public-Gatherings --> Families travel through train for functions such as Kumbh-Mela, Marriage-Functions but many of times they are unable to get seats in train together.
 On any given day, 12617 trains were running on Indian Railway tracks. The total number of passengers carried in 2012-13 was 8.421 billion (842.1 crore!) 23.07 million (2.3 crore or 2 % of population of country) passengers were on the move on any given day.
 
-### Main Focus of our App is to enhance the comfort of the large number of passengers by organizing and grouping the crowd.  
+### Main Focus of our App is to enhance the comfort of the large number of passengers by organizing and grouping the crowd at maximum extent.  
 
