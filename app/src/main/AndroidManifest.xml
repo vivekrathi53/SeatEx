@@ -15,19 +15,20 @@
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"
             android:value="ocr" />
 
-        <activity android:name="com.example.android.SeatEx.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.android.SeatEx.Begin" />
-        <activity android:name="com.example.android.SeatEx.Activity3" />
+        <activity android:name=".Begin" />
+        <activity android:name=".Activity3" />
         <activity
-            android:name="com.example.android.SeatEx.Seats"
+            android:name=".Seats"
             android:label="@string/title_activity_seats"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Help"></activity>
     </application>
 
 </manifest>
