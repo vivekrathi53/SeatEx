@@ -2,6 +2,7 @@ package com.example.android.SeatEx.Coaches;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Pair;
@@ -13,6 +14,11 @@ import android.widget.Toast;
 
 import com.example.android.SeatEx.R;
 import com.example.android.SeatEx.seat;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -21,11 +27,12 @@ import java.util.ArrayList;
  */
 
 public class S1 extends Fragment {
-    Button[] seats = new Button[75];
-    int i;
+    Button[] buttons = new Button[75];
     seat[] seatDetails = new seat[73];
     int[] visited = new int[73];
-    int MySeat,MyCoach;
+    String TrainNumber;
+    int MySeat=1,MyCoach=1;
+    final DatabaseReference databaseExpenses = FirebaseDatabase.getInstance().getReference();
     ArrayList<Pair<Integer,Integer>> interstedInYou = new ArrayList<>();
     ArrayList<Pair<Integer,Integer>> interstedIn = new ArrayList<>();
     @Nullable
@@ -41,53 +48,84 @@ public class S1 extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        for(i=1; i<=72; i++)
+        for(int i=1; i<=72; i++)
         {
-            seats[i]=view.findViewById(BUTTON_IDS[i-1]);
+            buttons[i]=view.findViewById(BUTTON_IDS[i-1]);
         }
-        seatDetails = (seat[]) getArguments().getSerializable("CoachDetails");
-        interstedInYou = seatDetails[1].getInterstedInYou();
-        for(int i=0;i<interstedInYou.size();i++)
+        TrainNumber = getArguments().getString("trainNumber");
+        MySeat = Integer.parseInt(getArguments().getString("seatNumber"));
+        String x=getArguments().getString("coachNumber");
+        MyCoach = Integer.parseInt(""+x.charAt(1));
+        System.out.println(getArguments().getString("coachNumber"));
+        for(int j=1;j<=72;j++)
         {
-            if(interstedInYou.get(i).first==1)
-            {
-                visited[interstedInYou.get(i).second]=1;
-                seats[interstedInYou.get(i).second].setBackgroundColor(Color.parseColor("#EF5350"));
-                // button color is pink
-            }
+            System.out.println(TrainNumber);
+            databaseExpenses.child("Node1").child(TrainNumber).child("S1").child(Integer.toString(j)).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+                {
+                    seat seatInfo = dataSnapshot.getValue(seat.class);
+                    seatDetails[seatInfo.getSeat_number()]=seatInfo;
+                    System.out.println("Value Changed to "+seatInfo.getCoach());
+                    int i = seatInfo.getSeat_number();
+                    int in = seatDetails[i].getInterested();
+                    if(i==MySeat&&1==MyCoach)
+                    {
+                        buttons[i].setBackgroundColor(Color.parseColor("#FFC107"));
+                        // button color is yellow
+                    }
+                    else if(in==0&&visited[i]!=1)
+                    {
+                        buttons[i].setBackgroundColor(Color.parseColor("#FBE9E7"));
+                        // button color is grey
+                    }
+                    else if(in==1&&visited[i]!=1)
+                    {
+                        // button color is green
+                        buttons[i].setBackgroundColor(Color.parseColor("#00C853"));
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
         }
-        for(int i=0;i<interstedIn.size();i++)
-        {
-            if(interstedIn.get(i).first==1)
-            {
-                visited[interstedIn.get(i).second]=2;
-                seats[interstedIn.get(i).second].setBackgroundColor(Color.parseColor("#3949AB"));
-                // button color is blue
-            }
-        }
-        for(int i=1;i<=72;i++)
-        {
-            int in = seatDetails[i].getInterested();
-            if(i==MySeat&&1==MyCoach)
-            {
-                seats[i].setBackgroundColor(Color.parseColor("#FFC107"));
-                // button color is yellow
-            }
-            else if(in==0&&visited[i]!=1)
-            {
-                seats[i].setBackgroundColor(Color.parseColor("#FBE9E7"));
-                // button color is grey
-            }
-            else if(in==1&&visited[i]!=1)
-            {
-                // button color is green
-                seats[i].setBackgroundColor(Color.parseColor("#00C853"));
+        databaseExpenses.child("Node1").child(TrainNumber).child("S"+Integer.toString(MyCoach)).child(Integer.toString(MySeat)).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                seat temp = dataSnapshot.getValue(seat.class);
+                if(temp==null) System.out.println("Crashed");
+                interstedInYou = temp.getInterstedInYou();
+                for(int i=0;i<interstedInYou.size();i++)
+                {
+                    if(interstedInYou.get(i).first==1)
+                    {
+                        visited[interstedInYou.get(i).second]=1;
+                        buttons[interstedInYou.get(i).second].setBackgroundColor(Color.parseColor("#EF5350"));
+                        // button color is pink
+                    }
+                }
+                for(int i=0;i<interstedIn.size();i++)
+                {
+                    if(interstedIn.get(i).first==1)
+                    {
+                        visited[interstedIn.get(i).second]=2;
+                        buttons[interstedIn.get(i).second].setBackgroundColor(Color.parseColor("#3949AB"));
+                        // button color is blue
+                    }
+                }
             }
 
-        }
-        for(i=1; i<=72; i++)
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+        for(int i=1; i<=72; i++)
         {
-            seats[i].setOnClickListener(new View.OnClickListener() {
+            buttons[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(getActivity(),((Button)view.findViewById(view.getId())).getText().toString(),Toast.LENGTH_LONG).show();}

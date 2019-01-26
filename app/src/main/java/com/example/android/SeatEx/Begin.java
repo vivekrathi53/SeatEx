@@ -115,6 +115,8 @@ public class Begin extends AppCompatActivity {
                                 {
                                     Toast.makeText(Begin.this,"Verified",Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(Begin.this,Seats.class);
+                                    intent.putExtra("seatNumber",seatNumber);
+                                    intent.putExtra("coachNumber",coachNumber);
                       //              intent.putExtra("TrainDetails",st);
                                     intent.putExtra("TrainNumber",trainName);
                                     startActivity(intent);

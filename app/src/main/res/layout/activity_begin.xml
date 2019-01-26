@@ -39,16 +39,19 @@
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="vivekrathi53@gmail.com"
             android:hint="Enter email through which ticket is reserved"/>
         <EditText
             android:id="@+id/seatNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="1"
             android:hint="Enter seat number"/>
         <EditText
             android:id="@+id/coachNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="S1"
             android:hint="Enter coach number"/>
         <Button
             android:layout_width="match_parent"

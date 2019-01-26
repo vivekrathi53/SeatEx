@@ -39,6 +39,8 @@ public class Seats extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     seat[][] s = new seat[13][73];
     String TrainNumber;
+    String SeatNumber;
+    String CoachNumber;
     final DatabaseReference databaseExpenses = FirebaseDatabase.getInstance().getReference();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,8 @@ public class Seats extends AppCompatActivity
         setSupportActionBar(toolbar);
         //seat[][] st = (seat[][])getIntent().getSerializableExtra("TrainDetails");
         TrainNumber = getIntent().getStringExtra("TrainNumber");
+        SeatNumber = getIntent().getStringExtra("seatNumber");
+        CoachNumber = getIntent().getStringExtra("coachNumber");
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -56,7 +60,7 @@ public class Seats extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        for(int i=1;i<=12;i++)
+     /**   for(int i=1;i<=12;i++)
         {
             for(int j=1;j<=72;j++)
             {
@@ -75,7 +79,7 @@ public class Seats extends AppCompatActivity
                     }
                 });
             }
-        }
+        }**/
     }
 
     @Override
@@ -119,8 +123,10 @@ public class Seats extends AppCompatActivity
         if (id == R.id.S1) {
             fragment = new S1();
             Bundle bundle = new Bundle();
-            bundle.putSerializable("CoachDetails",s[1]);
-            System.out.println(s[1][1].getEmail().toString());;
+            bundle.putString("trainNumber",TrainNumber);
+            bundle.putString("seatNumber",SeatNumber);
+            bundle.putString("coachNumber",CoachNumber);
+           // System.out.println(s[1][1].getEmail().toString());;
             fragment.setArguments(bundle);
         } else if (id == R.id.S2) {
             fragment = new S2();
