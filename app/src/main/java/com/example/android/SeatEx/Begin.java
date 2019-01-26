@@ -58,15 +58,15 @@ public class Begin extends AppCompatActivity {
                 return false;
             }
         });
-     /**   for(int i=1;i<=12;i++)
+      for(int i=1;i<=12;i++)
         {
             for(int j=1;j<=72;j++)
             {
                 Toast.makeText(Begin.this,"Hello",Toast.LENGTH_LONG).show();
-                seat s = new seat(j%8,i,j,0,"Indore","Khandwa",generateRandom(),(int)(Math.random()*70),(int)(Math.random()*2),"vivekrathi53@gmail.com");
+                seat s = new seat(j%8,i,j,0,"Indore","Khandwa",generateRandom((int)((Math.random())*10)+1),(int)(Math.random()*70),(int)(Math.random()*2),"vivekrathi53@gmail.com");
                 databaseExpenses.child("Node1").child(String.valueOf("3933")).child("S"+Integer.toString(i)).child(Integer.toString(j)).setValue(s);
             }
-        } **/
+        }
         editText2=findViewById(R.id.email);
         editText3=findViewById(R.id.seatNumber);
         editText4=findViewById(R.id.coachNumber);
@@ -81,12 +81,12 @@ public class Begin extends AppCompatActivity {
 
 
     }
-    public static String generateRandom()
+    public static String generateRandom(int n)
     {
         String aToZ="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234";
         Random rand=new Random();
         StringBuilder res=new StringBuilder();
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < n; i++) {
             int randIndex=rand.nextInt(aToZ.length());
             res.append(aToZ.charAt(randIndex));
         }
@@ -104,10 +104,10 @@ public class Begin extends AppCompatActivity {
                 coachNumber=editText4.getText().toString();
                 if(trainName!=null && emaill!=null && seatNumber!=null && coachNumber!=null)
                 {
-                    databaseExpenses.child("Node1").child(trainName).child(coachNumber).addValueEventListener(new ValueEventListener() {
+                    databaseExpenses.child("Node1").child(trainName).child(coachNumber).child(seatNumber).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            seat s = dataSnapshot.child(seatNumber).getValue(seat.class);
+                            seat s = dataSnapshot.getValue(seat.class);
                             if(s!=null)
                             {
                                 Toast.makeText(Begin.this,emaill,Toast.LENGTH_LONG).show();
@@ -120,6 +120,8 @@ public class Begin extends AppCompatActivity {
                       //              intent.putExtra("TrainDetails",st);
                                     intent.putExtra("TrainNumber",trainName);
                                     startActivity(intent);
+                                    s.setInterested(1);
+                                    databaseExpenses.child("Node1").child(trainName).child(coachNumber).child(seatNumber).setValue(s);
                                 }
                                 else
                                 {
