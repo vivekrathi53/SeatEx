@@ -123,7 +123,10 @@ public class Seats extends AppCompatActivity
             }
             else if(in==0)// skin color(pinkish)
             {
-                b.setBackgroundColor(Color.parseColor("#FBE9E7"));
+                if(temp.getGender()==0)
+                    b.setBackgroundColor(Color.parseColor("#A1887F"));
+                else
+                    b.setBackgroundColor(Color.parseColor("#FBE9E7"));
             }
             else if(in==1&& visited[temp.getCoach()][temp.getSeat_number()]==0)
             {
@@ -156,6 +159,28 @@ public class Seats extends AppCompatActivity
                    }
                }
            }
+        }
+        else if(temp.getCoach()==MyCoach&&temp.getSeat_number()==MySeat)
+        {
+            Toast.makeText(Seats.this,("Matched With Parent--"+temp.getCoach()+" "+temp.getSeat_number()),Toast.LENGTH_LONG).show();
+            ArrayList<Pair<Integer,Integer> > InterestedInYou = temp.getInterstedInYou();// pink
+            ArrayList<Pair<Integer,Integer> > InterestedIn = temp.getInterstedIn();// blue
+            for(int i=0;i<InterestedInYou.size();i++)
+            {
+                if(("S"+InterestedInYou.get(i).first).equals(curCoach))
+                {
+                    visited[InterestedInYou.get(i).first][InterestedInYou.get(i).second]=2;
+                    buttons[InterestedInYou.get(i).second].setBackgroundColor(Color.parseColor("#EF5350"));// pink color
+                }
+            }
+            for(int i=0;i<InterestedIn.size();i++)
+            {
+                if(("S"+InterestedIn.get(i).first).equals(curCoach))
+                {
+                    visited[InterestedIn.get(i).first][InterestedIn.get(i).second]=3;
+                    buttons[InterestedIn.get(i).second].setBackgroundColor(Color.parseColor("#3949AB"));// blue color
+                }
+            }
         }
         else
         {
@@ -249,7 +274,7 @@ public class Seats extends AppCompatActivity
                     int id = view.getId();
 
                     Button thisSeat = view.findViewById(id);
-                    int seatNumber=Integer.parseInt(thisSeat.getText().toString());
+                    int seatNumber=Integer.parseInt(thisSeat.getText().toString().substring(0,2));
                     if(visited[(Integer.parseInt(""+curCoach.charAt(1)))][seatNumber]==2)// PINK
                     {
                         // show dialog box and notification and timer
@@ -364,6 +389,7 @@ public class Seats extends AppCompatActivity
                                         Toast.makeText(Seats.this,curCoach,Toast.LENGTH_LONG).show();
                                         temp2.add(new Pair(Integer.parseInt(""+curCoach.charAt(1)),changingSeat));
                                         temp.setInterstedIn(temp2);
+                                        visited[(Integer.parseInt(""+curCoach.charAt(1)))][changingSeat]=3;
                                         s[Integer.parseInt(""+curCoach.charAt(1))][changingSeat]=temp;
                                         databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child("S"+Integer.toString(MyCoach)).child(Integer.toString(MySeat)).setValue(temp);
 
@@ -444,6 +470,7 @@ public class Seats extends AppCompatActivity
                 if(s[1][i]!=null)updateDisplay(s[1][i]);
                 else Toast.makeText(Seats.this,"Wait A minute",Toast.LENGTH_LONG).show();
             }
+            updateDisplay(s[MyCoach][MySeat]);
            // refresh();
         } else if (id == R.id.S2) {
             curCoach="S2";
@@ -453,6 +480,7 @@ public class Seats extends AppCompatActivity
                 if(s[2][i]!=null)updateDisplay(s[2][i]);
                 else Toast.makeText(Seats.this,"Wait A minute",Toast.LENGTH_LONG).show();
             }
+            updateDisplay(s[MyCoach][MySeat]);
            // refresh();
         } else if (id == R.id.S3) {
             curCoach="S3";
@@ -462,35 +490,65 @@ public class Seats extends AppCompatActivity
                 if(s[3][i]!=null)updateDisplay(s[3][i]);
                 else Toast.makeText(Seats.this,"Wait A minute",Toast.LENGTH_LONG).show();
             }
+            updateDisplay(s[MyCoach][MySeat]);
            // refresh();
         } else if (id == R.id.S4) {
             curCoach="S4";
             curCoachDisplay.setText("S4");
             for(int i=1;i<=72;i++)
             {
-                updateDisplay(s[4][i]);
+                if(s[4][i]!=null)updateDisplay(s[4][i]);
+                else Toast.makeText(Seats.this,"Wait A minute",Toast.LENGTH_LONG).show();
             }
+            updateDisplay(s[MyCoach][MySeat]);
            // refresh();
         } else if (id == R.id.S5) {
             curCoach="S5";
             curCoachDisplay.setText("S5");
             for(int i=1;i<=72;i++)
             {
-                updateDisplay(s[5][i]);
+                if(s[5][i]!=null)updateDisplay(s[5][i]);
+                else Toast.makeText(Seats.this,"Wait A minute",Toast.LENGTH_LONG).show();
             }
+            updateDisplay(s[MyCoach][MySeat]);
            // refresh();
         } else if (id == R.id.S6) {
             curCoach="S6";
+            curCoachDisplay.setText("S6");
+            for(int i=1;i<=72;i++)
+            {
+                if(s[6][i]!=null)updateDisplay(s[6][i]);
+                else Toast.makeText(Seats.this,"Wait A minute",Toast.LENGTH_LONG).show();
+            }
+            updateDisplay(s[MyCoach][MySeat]);
            // refresh();
         }else if (id == R.id.S7) {
             curCoach="S7";
-            refresh();
+            curCoachDisplay.setText("S7");
+            for(int i=1;i<=72;i++)
+            {
+                if(s[7][i]!=null)updateDisplay(s[7][i]);
+                else Toast.makeText(Seats.this,"Wait A minute",Toast.LENGTH_LONG).show();
+            }
+            updateDisplay(s[MyCoach][MySeat]);
         } else if (id == R.id.S8) {
             curCoach="S8";
-            refresh();
+            curCoachDisplay.setText("S8");
+            for(int i=1;i<=72;i++)
+            {
+                if(s[8][i]!=null)updateDisplay(s[8][i]);
+                else Toast.makeText(Seats.this,"Wait A minute",Toast.LENGTH_LONG).show();
+            }
+            updateDisplay(s[MyCoach][MySeat]);
         } else if (id == R.id.S9) {
             curCoach="S9";
-            refresh();
+            curCoachDisplay.setText("S9");
+            for(int i=1;i<=72;i++)
+            {
+                if(s[9][i]!=null)updateDisplay(s[9][i]);
+                else Toast.makeText(Seats.this,"Wait A minute",Toast.LENGTH_LONG).show();
+            }
+            updateDisplay(s[MyCoach][MySeat]);
         } else if (id == R.id.S10) {
             curCoach="S10";
             refresh();

@@ -35,7 +35,7 @@ public class Begin extends AppCompatActivity {
     final DatabaseReference databaseExpenses = FirebaseDatabase.getInstance().getReference();
   //  TextView textView1,textView2,textView3,textView4;
     String seatNumber,coachNumber,Date,emaill;
-    EditText editText1;
+    EditText editText1,editText;
     EditText editText2,editText3,editText4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,21 +43,8 @@ public class Begin extends AppCompatActivity {
         setContentView(R.layout.activity_begin);
         editText1=findViewById(R.id.date);
         list= new String[]{"raj","gaurav"};
-        materialSearchView=findViewById(R.id.mySearch);
-        materialSearchView.closeSearch();
-        materialSearchView.setSuggestions(list);
-        materialSearchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                trainName=query;
-                return false;
-            }
+        editText = findViewById(R.id.train_number);
 
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-        });
       /*for(int i=1;i<=12;i++)
         {
             for(int j=1;j<=72;j++)
@@ -102,6 +89,7 @@ public class Begin extends AppCompatActivity {
                 emaill=editText2.getText().toString();
                 seatNumber=editText3.getText().toString();
                 coachNumber=editText4.getText().toString();
+                trainName=editText.getText().toString();
                 if(trainName!=null && emaill!=null && seatNumber!=null && coachNumber!=null)
                 {
                     databaseExpenses.child("Node1").child(trainName).child(coachNumber).child(seatNumber).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -159,10 +147,10 @@ public class Begin extends AppCompatActivity {
         datePickerDialog.show();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        getMenuInflater().inflate(R.menu.menu,menu);
+  //  @Override
+  //  public boolean onCreateOptionsMenu(Menu menu)
+  //  {
+  /*      getMenuInflater().inflate(R.menu.menu,menu);
         MenuItem item = menu.findItem(R.id.search);
         MenuItem item1 = menu.findItem(R.id.all_tabs);
         materialSearchView.setMenuItem(item);
@@ -178,5 +166,5 @@ public class Begin extends AppCompatActivity {
             }
         });
         return true;
-    }
+    }*/
 }
