@@ -1,5 +1,6 @@
 package com.example.android.SeatEx;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -32,7 +33,7 @@ public class Seats extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     seat[][] s = new seat[13][73];
     Button[] buttons = new Button[75];
-
+    public static int flag=0;
     int[][] visited = new int[13][73];
     int TrainNumber;
     int MyCoach;
@@ -271,81 +272,71 @@ public class Seats extends AppCompatActivity
                     // if pink then swap their seats and make them grey and make both array list empty
                     // if green then change to blue and add to interestedIn arraylist
                     // if grey then no operation and show then prompt
-                    int id = view.getId();
+                //    flag=0;
+               //     openDialog();
 
-                    Button thisSeat = view.findViewById(id);
-                    int seatNumber=Integer.parseInt(thisSeat.getText().toString().substring(0,2));
-                    if(visited[(Integer.parseInt(""+curCoach.charAt(1)))][seatNumber]==2)// PINK
-                    {
-                        // show dialog box and notification and timer
-                        // make them grey
-                        databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child("S"+Integer.toString(MyCoach)).child(Integer.toString(MySeat)).addValueEventListener(new ValueEventListener()
+                  //  System.out.println("----------------------------------"+flag);
+                    // Dialog Prompt add here
+                 //   if(flag==1)
+                 //   {
+                        int id = view.getId();
+
+                        Button thisSeat = view.findViewById(id);
+                        final int seatNumber=Integer.parseInt(thisSeat.getText().toString().substring(0,2));
+                        final seat YourSeat = s[MyCoach][MySeat];
+                        final seat SwapperSeat = s[(Integer.parseInt(""+curCoach.charAt(1)))][seatNumber];
+                        if(visited[(Integer.parseInt(""+curCoach.charAt(1)))][seatNumber]==2)// PINK
                         {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
-                            {
-                                seat temp = dataSnapshot.getValue(seat.class);//user seat
-                                temp.setInterstedInYou(null);
-                                temp.setInterstedIn(null);
-                                temp.setInterested(0);
-                                databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child("S"+Integer.toString(MyCoach)).child(Integer.toString(MySeat)).setValue(temp);
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                            }
-                        });
-                        databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child(curCoach).child(Integer.toString(seatNumber)).addValueEventListener(new ValueEventListener()
-                        {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
-                            {
-                                seat temp = dataSnapshot.getValue(seat.class);//user seat
-                                temp.setInterstedInYou(null);
-                                temp.setInterstedIn(null);
-                                temp.setInterested(0);
-                                // make their color grey here or above :P
-                                databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child(curCoach).child(Integer.toString(temp.getSeat_number())).setValue(temp);
-                                // delete their presence from all nodes of train
-                                for(int i=1;i<=12;i++)
-                                {
-                                    for(int j=1;j<=72;j++)
+                            // show dialog box and notification and timer
+                            // make them grey
+                                    seat temp ;
+                                    temp=SwapperSeat;
+                                    temp.setInterstedInYou(null);
+                                    temp.setInterstedIn(null);
+                                    temp.setInterested(0);
+                                    temp.setSeat_number(MySeat);
+                                    temp.setCoach(MyCoach);
+                                    YourSeat.setCoach((Integer.parseInt(""+curCoach.charAt(1))));
+                                    YourSeat.setSeat_number(seatNumber);
+                                    YourSeat.setInterstedIn(null);
+                                    YourSeat.setInterstedInYou(null);
+                                    YourSeat.setInterested(0);
+                                    databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child("S"+Integer.toString(MyCoach)).child(Integer.toString(MySeat)).setValue(temp);
+                                    databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child(curCoach).child(Integer.toString(seatNumber)).setValue(YourSeat);
+                                    for(int i=1;i<=12;i++)
                                     {
-                                        databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child(curCoach).child(Integer.toString(j)).addListenerForSingleValueEvent(new ValueEventListener() {
-                                            @Override
-                                            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
-                                            {
-                                                seat temp = dataSnapshot.getValue(seat.class);
-                                                ArrayList<Pair<Integer,Integer> > temp2 = temp.getInterstedInYou();
-                                                temp2.remove(new Pair(MyCoach,MySeat));
-                                                temp2.remove(new Pair(curCoach,temp.getSeat_number()));
-                                                databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child("S"+Integer.toString(temp.getCoach())).child(Integer.toString(temp.getCoach())).setValue(temp);
-                                            }
+                                        for(int j=1;j<=72;j++)
+                                        {
+                                            databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child(curCoach).child(Integer.toString(j)).addListenerForSingleValueEvent(new ValueEventListener() {
+                                                @Override
+                                                public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+                                                {
+                                                    seat temp = dataSnapshot.getValue(seat.class);
+                                                    ArrayList<Pair<Integer,Integer> > temp2 = temp.getInterstedInYou();
+                                                    temp2.remove(new Pair(MyCoach,MySeat));
+                                                    temp2.remove(new Pair(curCoach,temp.getSeat_number()));
+                                                    databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child("S"+Integer.toString(temp.getCoach())).child(Integer.toString(temp.getCoach())).setValue(temp);
+                                                }
 
-                                            @Override
-                                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                                                @Override
+                                                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                                            }
-                                        });
+                                                }
+                                            });
 
+                                        }
                                     }
-                                }
-                            }
 
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                            }
-                        });
 
-                        //finishActivity(1);
-                    }
 
-                    else if(s[(Integer.parseInt(""+curCoach.charAt(1)))][seatNumber].getInterested()==1&&visited[(Integer.parseInt(""+curCoach.charAt(1)))][seatNumber]==0)// green color
-                    {
-                        // add dialog box code here
-                        // then add following code
+                            //finishActivity(1);
+                        }
+
+                        else if(s[(Integer.parseInt(""+curCoach.charAt(1)))][seatNumber].getInterested()==1&&visited[(Integer.parseInt(""+curCoach.charAt(1)))][seatNumber]==0)// green color
+                        {
+                            // add dialog box code here
+                            // then add following code
                         /*databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child("S"+Integer.toString(MyCoach)).child(Integer.toString(MySeat)).addListenerForSingleValueEvent(new ValueEventListener()
                         {
                             @Override
@@ -364,57 +355,59 @@ public class Seats extends AppCompatActivity
 
                             }
                         });*/
-                        databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child(curCoach).child(Integer.toString(seatNumber)).addListenerForSingleValueEvent(new ValueEventListener()
-                        {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+                            databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child(curCoach).child(Integer.toString(seatNumber)).addListenerForSingleValueEvent(new ValueEventListener()
                             {
-                                seat temp = dataSnapshot.getValue(seat.class);//user seat
-                                ArrayList<Pair<Integer,Integer> > temp2 = temp.getInterstedInYou();
-                                temp2.add(new Pair(MyCoach,MySeat));
-                                temp.setInterstedInYou(temp2);
-                                Toast.makeText(Seats.this,curCoach,Toast.LENGTH_LONG).show();
-                                final int changingSeat = temp.getSeat_number();
-                                visited[(Integer.parseInt(""+curCoach.charAt(1)))][changingSeat]=2;
-                                databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child(curCoach).child(Integer.toString(temp.getSeat_number())).setValue(temp);
-                                updateDisplay(temp);
-
-                                databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child("S"+Integer.toString(MyCoach)).child(Integer.toString(MySeat)).addListenerForSingleValueEvent(new ValueEventListener()
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot)
                                 {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+                                    seat temp = dataSnapshot.getValue(seat.class);//user seat
+                                    ArrayList<Pair<Integer,Integer> > temp2 = temp.getInterstedInYou();
+                                    temp2.add(new Pair(MyCoach,MySeat));
+                                    temp.setInterstedInYou(temp2);
+                                    Toast.makeText(Seats.this,curCoach,Toast.LENGTH_LONG).show();
+                                    final int changingSeat = temp.getSeat_number();
+                                    visited[(Integer.parseInt(""+curCoach.charAt(1)))][changingSeat]=2;
+                                    databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child(curCoach).child(Integer.toString(temp.getSeat_number())).setValue(temp);
+                                    updateDisplay(temp);
+
+                                    databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child("S"+Integer.toString(MyCoach)).child(Integer.toString(MySeat)).addListenerForSingleValueEvent(new ValueEventListener()
                                     {
-                                        seat temp = dataSnapshot.getValue(seat.class);//user seat
-                                        ArrayList<Pair<Integer,Integer> > temp2 = temp.getInterstedIn();
-                                        Toast.makeText(Seats.this,curCoach,Toast.LENGTH_LONG).show();
-                                        temp2.add(new Pair(Integer.parseInt(""+curCoach.charAt(1)),changingSeat));
-                                        temp.setInterstedIn(temp2);
-                                        visited[(Integer.parseInt(""+curCoach.charAt(1)))][changingSeat]=3;
-                                        s[Integer.parseInt(""+curCoach.charAt(1))][changingSeat]=temp;
-                                        databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child("S"+Integer.toString(MyCoach)).child(Integer.toString(MySeat)).setValue(temp);
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+                                        {
+                                            seat temp = dataSnapshot.getValue(seat.class);//user seat
+                                            ArrayList<Pair<Integer,Integer> > temp2 = temp.getInterstedIn();
+                                            Toast.makeText(Seats.this,curCoach,Toast.LENGTH_LONG).show();
+                                            temp2.add(new Pair(Integer.parseInt(""+curCoach.charAt(1)),changingSeat));
+                                            temp.setInterstedIn(temp2);
+                                            visited[(Integer.parseInt(""+curCoach.charAt(1)))][changingSeat]=3;
+                                            s[Integer.parseInt(""+curCoach.charAt(1))][changingSeat]=temp;
+                                            databaseExpenses.child("Node1").child(Integer.toString(TrainNumber)).child("S"+Integer.toString(MyCoach)).child(Integer.toString(MySeat)).setValue(temp);
 
-                                    }
+                                        }
 
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                                    }
-                                });
-                            }
+                                        }
+                                    });
+                                }
 
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                            }
-                        });
+                                }
+                            });
 
 
 
-                    }
-                    else if(s[(Integer.parseInt(""+curCoach.charAt(1)))][seatNumber].getInterested()==0)// grey color
-                    {
-                        // No Changes
-                    }
+                        }
+                        else if(s[(Integer.parseInt(""+curCoach.charAt(1)))][seatNumber].getInterested()==0)// grey color
+                        {
+                            // No Changes
+                        }
+
+                   // }
                 }
 
 
@@ -424,6 +417,11 @@ public class Seats extends AppCompatActivity
 
     }
 
+    private void openDialog() {
+        Dial dial = new Dial();
+        dial.show(getSupportFragmentManager(),"Confirm");
+       // return flag;
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -450,6 +448,8 @@ public class Seats extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(Seats.this,Help.class);
+            startActivity(intent);
             return true;
         }
 

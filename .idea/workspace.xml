@@ -17,9 +17,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Begin.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Begin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Dial.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Dial.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Seats.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Seats.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_begin.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_begin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_seats.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_seats.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/seats.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/seats.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -113,21 +114,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="60" lean-forward="false" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="gradle.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gradle.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="69" lean-forward="false" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
+            <state relative-caret-position="289">
+              <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -136,100 +127,63 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="56" />
+            <state relative-caret-position="102">
+              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Begin.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Begin.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Begin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+            <state relative-caret-position="1249">
+              <caret line="171" column="61" lean-forward="false" selection-start-line="171" selection-start-column="61" selection-end-line="171" selection-end-column="61" />
               <folding>
-                <marker date="1548541977786" expanded="false" signature="6594:6720" ph="(menuItem) → {" />
-                <marker date="1548541977786" expanded="false" signature="7027:7042" ph="}" />
+                <marker date="1548554921767" expanded="false" signature="7895:8021" ph="(menuItem) → {" />
+                <marker date="1548554921767" expanded="false" signature="8328:8343" ph="}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seat.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/seat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1462">
-              <caret line="145" column="25" lean-forward="false" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="25" />
-              <folding>
-                <element signature="e#726#727#0" expanded="false" />
-                <element signature="e#754#755#0" expanded="false" />
-                <element signature="e#796#797#0" expanded="false" />
-                <element signature="e#825#826#0" expanded="false" />
-                <element signature="e#852#853#0" expanded="false" />
-                <element signature="e#878#879#0" expanded="false" />
-                <element signature="e#913#914#0" expanded="false" />
-                <element signature="e#943#944#0" expanded="false" />
-                <element signature="e#973#974#0" expanded="false" />
-                <element signature="e#1002#1003#0" expanded="false" />
-                <element signature="e#1043#1044#0" expanded="false" />
-                <element signature="e#1079#1080#0" expanded="false" />
-                <element signature="e#1353#1354#0" expanded="false" />
-                <element signature="e#1387#1388#0" expanded="false" />
-                <element signature="e#1581#1582#0" expanded="false" />
-                <element signature="e#1618#1619#0" expanded="false" />
-                <element signature="e#1683#1684#0" expanded="false" />
-                <element signature="e#1717#1718#0" expanded="false" />
-                <element signature="e#1787#1788#0" expanded="false" />
-                <element signature="e#1827#1828#0" expanded="false" />
-                <element signature="e#1895#1896#0" expanded="false" />
-                <element signature="e#1932#1933#0" expanded="false" />
-                <element signature="e#1999#2000#0" expanded="false" />
-                <element signature="e#2036#2037#0" expanded="false" />
-                <element signature="e#2203#2204#0" expanded="false" />
-                <element signature="e#2230#2231#0" expanded="false" />
-                <element signature="e#2267#2268#0" expanded="false" />
-                <element signature="e#2299#2300#0" expanded="false" />
-                <element signature="e#2328#2329#0" expanded="false" />
-                <element signature="e#2356#2357#0" expanded="false" />
-                <element signature="e#2395#2396#0" expanded="false" />
-                <element signature="e#2429#2430#0" expanded="false" />
-                <element signature="e#2464#2465#0" expanded="false" />
-                <element signature="e#2498#2499#0" expanded="false" />
-                <element signature="e#2549#2550#0" expanded="false" />
-                <element signature="e#2595#2596#0" expanded="false" />
-                <element signature="e#2629#2630#0" expanded="false" />
-                <element signature="e#2662#2663#0" expanded="false" />
-                <element signature="e#2711#2712#0" expanded="false" />
-                <element signature="e#2755#2756#0" expanded="false" />
-                <element signature="e#2788#2789#0" expanded="false" />
-                <element signature="e#2817#2818#0" expanded="false" />
-                <element signature="e#2861#2862#0" expanded="false" />
-                <element signature="e#2897#2898#0" expanded="false" />
-                <element signature="e#2935#2936#0" expanded="false" />
-                <element signature="e#2969#2970#0" expanded="false" />
-                <element signature="e#3023#3024#0" expanded="false" />
-                <element signature="e#3069#3070#0" expanded="false" />
-                <element signature="e#3104#3105#0" expanded="false" />
-                <element signature="e#3135#3136#0" expanded="false" />
-                <element signature="e#3183#3184#0" expanded="false" />
-                <element signature="e#3223#3224#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Seats.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Seats.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Seats.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="127" column="20" lean-forward="true" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
+            <state relative-caret-position="137">
+              <caret line="275" column="17" lean-forward="false" selection-start-line="275" selection-start-column="17" selection-end-line="275" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3440#3471#0" expanded="true" />
-                <element signature="e#3473#3505#0" expanded="true" />
-                <element signature="e#12086#21696#0" expanded="true" />
-                <element signature="e#21695#21696#0" expanded="true" />
+                <element signature="e#3500#3531#0" expanded="true" />
+                <element signature="e#3533#3565#0" expanded="true" />
+                <element signature="e#12146#21412#0" expanded="true" />
+                <element signature="e#21411#21412#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="seats.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/seats.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dial.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Dial.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+              <folding>
+                <element signature="e#629#908#0" expanded="true" />
+                <element signature="e#907#908#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -241,8 +195,34 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+            <state relative-caret-position="285">
+              <caret line="59" column="85" lean-forward="false" selection-start-line="59" selection-start-column="85" selection-end-line="59" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_seats.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_seats.xml">
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app_bar_seats.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_seats.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -257,31 +237,6 @@
             <state relative-caret-position="123">
               <caret line="114" column="43" lean-forward="false" selection-start-line="114" selection-start-column="43" selection-end-line="114" selection-end-column="43" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_help.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2057">
-              <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Help.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Help.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -2093,10 +2048,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Coaches/S1.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/seat.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_begin.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Begin.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_seats.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Dial.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/seats.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Seats.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Begin.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_begin.xml" />
       </list>
     </option>
   </component>
@@ -2136,6 +2093,24 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SeatEx" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.android.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2210,7 +2185,7 @@
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../../Public/Android/Sdk" />
     <property name="show.do.not.copy.http.proxy.settings.to.gradle" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="device.picker.selection" value="fe14c6169804 fe40c6389804" />
+    <property name="device.picker.selection" value="fe40c6389804" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="SearchEverywhereHistoryKey" value="android.util.Pair&#9;null&#9;null" />
@@ -2328,7 +2303,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1548544651423" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1548554922079" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2376,7 +2351,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1548544651424" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1548554922079" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2559,7 +2534,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1548544651452" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1548554922085" />
       </method>
     </configuration>
     <list size="2">
@@ -2612,7 +2587,7 @@
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5030303" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2620,18 +2595,18 @@
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.4939394" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33333334" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -2688,13 +2663,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../../Public/Android/Sdk/platforms/android-26/android.jar!/java/lang/String.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="153" column="28" lean-forward="false" selection-start-line="153" selection-start-column="28" selection-end-line="153" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../MyShare/app/src/main/java/com/example/android/myshare/MainActivity.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/MySingleton.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -2834,13 +2802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Dial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../MyWeb/build.gradle" />
     <entry file="file://$PROJECT_DIR$/../MyWeb/app/build.gradle" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
@@ -2875,25 +2836,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../MyWeb/app/src/main/java/com/example/android/myweb/Begin.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_seats.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Activity3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="37" column="69" lean-forward="false" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_3.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -2913,17 +2855,6 @@
             <element signature="e#2325#2326#0" expanded="false" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_seats.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Coaches/S1.java" />
@@ -2968,14 +2899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -2984,90 +2907,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Activity3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="69" lean-forward="false" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
+        <state relative-caret-position="422">
+          <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="42" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/seat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
+        <state relative-caret-position="323">
           <caret line="145" column="25" lean-forward="false" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="25" />
           <folding>
-            <element signature="e#726#727#0" expanded="false" />
-            <element signature="e#754#755#0" expanded="false" />
-            <element signature="e#796#797#0" expanded="false" />
-            <element signature="e#825#826#0" expanded="false" />
-            <element signature="e#852#853#0" expanded="false" />
-            <element signature="e#878#879#0" expanded="false" />
-            <element signature="e#913#914#0" expanded="false" />
-            <element signature="e#943#944#0" expanded="false" />
-            <element signature="e#973#974#0" expanded="false" />
-            <element signature="e#1002#1003#0" expanded="false" />
-            <element signature="e#1043#1044#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-            <element signature="e#1353#1354#0" expanded="false" />
-            <element signature="e#1387#1388#0" expanded="false" />
-            <element signature="e#1581#1582#0" expanded="false" />
-            <element signature="e#1618#1619#0" expanded="false" />
-            <element signature="e#1683#1684#0" expanded="false" />
-            <element signature="e#1717#1718#0" expanded="false" />
-            <element signature="e#1787#1788#0" expanded="false" />
-            <element signature="e#1827#1828#0" expanded="false" />
-            <element signature="e#1895#1896#0" expanded="false" />
-            <element signature="e#1932#1933#0" expanded="false" />
-            <element signature="e#1999#2000#0" expanded="false" />
-            <element signature="e#2036#2037#0" expanded="false" />
-            <element signature="e#2203#2204#0" expanded="false" />
-            <element signature="e#2230#2231#0" expanded="false" />
-            <element signature="e#2267#2268#0" expanded="false" />
-            <element signature="e#2299#2300#0" expanded="false" />
-            <element signature="e#2328#2329#0" expanded="false" />
-            <element signature="e#2356#2357#0" expanded="false" />
-            <element signature="e#2395#2396#0" expanded="false" />
-            <element signature="e#2429#2430#0" expanded="false" />
-            <element signature="e#2464#2465#0" expanded="false" />
-            <element signature="e#2498#2499#0" expanded="false" />
-            <element signature="e#2549#2550#0" expanded="false" />
-            <element signature="e#2595#2596#0" expanded="false" />
-            <element signature="e#2629#2630#0" expanded="false" />
-            <element signature="e#2662#2663#0" expanded="false" />
-            <element signature="e#2711#2712#0" expanded="false" />
-            <element signature="e#2755#2756#0" expanded="false" />
-            <element signature="e#2788#2789#0" expanded="false" />
-            <element signature="e#2817#2818#0" expanded="false" />
-            <element signature="e#2861#2862#0" expanded="false" />
-            <element signature="e#2897#2898#0" expanded="false" />
-            <element signature="e#2935#2936#0" expanded="false" />
-            <element signature="e#2969#2970#0" expanded="false" />
-            <element signature="e#3023#3024#0" expanded="false" />
-            <element signature="e#3069#3070#0" expanded="false" />
-            <element signature="e#3104#3105#0" expanded="false" />
-            <element signature="e#3135#3136#0" expanded="false" />
-            <element signature="e#3183#3184#0" expanded="false" />
-            <element signature="e#3223#3224#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Begin.java">
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        <state relative-caret-position="289">
+          <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Dial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
           <folding>
-            <marker date="1548541977786" expanded="false" signature="6594:6720" ph="(menuItem) → {" />
-            <marker date="1548541977786" expanded="false" signature="7027:7042" ph="}" />
+            <element signature="e#629#908#0" expanded="true" />
+            <element signature="e#907#908#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_begin.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_seats.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_seats.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        <state relative-caret-position="50">
+          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -3086,16 +2985,49 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/seats.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Seats.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="127" column="20" lean-forward="true" selection-start-line="127" selection-start-column="20" selection-end-line="127" selection-end-column="20" />
+        <state relative-caret-position="137">
+          <caret line="275" column="17" lean-forward="false" selection-start-line="275" selection-start-column="17" selection-end-line="275" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3440#3471#0" expanded="true" />
-            <element signature="e#3473#3505#0" expanded="true" />
-            <element signature="e#12086#21696#0" expanded="true" />
-            <element signature="e#21695#21696#0" expanded="true" />
+            <element signature="e#3500#3531#0" expanded="true" />
+            <element signature="e#3533#3565#0" expanded="true" />
+            <element signature="e#12146#21412#0" expanded="true" />
+            <element signature="e#21411#21412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_begin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="59" column="85" lean-forward="false" selection-start-line="59" selection-start-column="85" selection-end-line="59" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/SeatEx/Begin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1249">
+          <caret line="171" column="61" lean-forward="false" selection-start-line="171" selection-start-column="61" selection-end-line="171" selection-end-column="61" />
+          <folding>
+            <marker date="1548554921767" expanded="false" signature="7895:8021" ph="(menuItem) → {" />
+            <marker date="1548554921767" expanded="false" signature="8328:8343" ph="}" />
           </folding>
         </state>
       </provider>
